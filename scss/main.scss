@@ -1,0 +1,188 @@
+@import 'resets';
+@import 'variables';
+@import 'responsiveness';
+
+body{
+    font-size: $font-size;
+    font-family: $font-family;
+    background-color: $light-grey-blue;
+    color:$dark-grey-blue;
+    overflow: hidden;
+    @include for-mobile-up{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    @include for-mobile-up{
+        flex-direction: row;
+        max-width: 800px;
+        .img__container{
+            width: 43%;
+            padding:0 100px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 0;
+        }
+        .text__container{
+            width: 60%;
+            
+        }
+    }
+}
+
+
+.img__container{
+    max-width: 600px;
+}
+
+.text__container{
+    position: relative;
+    padding:40px 30px 10px 30px;
+}
+
+.text-description--title{
+    font-size:16px;
+    @include for-mobile-up{
+        font-size: 24px;
+    }
+}
+.text-description--paragraph{
+    color:$greyish-blue;
+    padding-top: 15px;
+    line-height: 1.6;
+    padding-right: 8px;
+}
+
+.img__container {
+    background-image: url(../images/drawers.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 105px;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.socials__container{
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 15px;
+    .personal-details{
+        padding-left: 20px;
+        padding-right: 50px;
+        &--name{
+            font-weight: $hard-font;
+        }
+        &--date{
+            color:$greyish-blue;
+        }
+        @include for-mobile-up{
+            padding-right: 190px;
+        }
+    }
+    &--img{
+        width: 40px;
+        border-radius: 50%;
+        
+    }
+    &--share {
+        width: 30px;
+        height: 30px;
+        background-color: $light-grey-blue;
+        border-radius: 50%;
+        cursor: pointer;
+        text-align: center;
+        padding-top: 5px;
+        z-index: 1;
+        
+    }
+    &--share:hover{
+        background-color: $dark-grey-blue;
+        color:#fff;
+    }
+}
+
+
+.share-panel{
+    position: absolute;
+    left:0;
+    bottom: 0;
+    background-color: $dark-grey-blue;
+    color:#fff;
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 0 0 10px 10px;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:20px;
+    letter-spacing: 5px;
+    z-index:0;
+    opacity: 0;
+    pointer-events: none;
+    @include for-mobile-up{
+        position: absolute;
+        right:-15%;
+        left:auto;
+        bottom: auto;
+        top:50%;
+        display: flex;
+        padding:15px 30px;
+        width: 250px;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        .share-arrow{
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left:10px solid transparent;
+            border-right:10px solid transparent;
+            border-top:10px solid $dark-grey-blue;
+            top:100%;
+            
+        }
+    }
+    
+}
+.share-panel span{
+    color:$greyish-blue;
+}
+
+.share-panel i:hover{
+    color: $greyish-blue;
+    border-radius: 50%; 
+}
+.share-panel:hover{
+    cursor: pointer;
+    
+}
+
+
+.show{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.attribution { 
+    padding:50px;
+    font-size: 13px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+.container{
+   width: 90%;
+   margin:50px auto 0 auto;
+}
