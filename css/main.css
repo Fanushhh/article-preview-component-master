@@ -112,7 +112,7 @@ body {
 }
 @media (min-width: 600px) {
   .text-description--title {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
@@ -121,6 +121,11 @@ body {
   padding-top: 15px;
   line-height: 1.6;
   padding-right: 8px;
+}
+@media (min-width: 600px) {
+  .text-description--paragraph {
+    padding-right: 25px;
+  }
 }
 
 .img__container {
@@ -151,7 +156,7 @@ body {
 }
 @media (min-width: 600px) {
   .socials__container .personal-details {
-    padding-right: 190px;
+    padding-right: 170px;
   }
 }
 .socials__container--img {
@@ -194,7 +199,7 @@ body {
 @media (min-width: 600px) {
   .share-panel {
     position: absolute;
-    right: -15%;
+    right: -12%;
     left: auto;
     bottom: auto;
     top: 50%;
