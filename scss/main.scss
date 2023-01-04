@@ -7,7 +7,7 @@ body{
     font-family: $font-family;
     background-color: $light-grey-blue;
     color:$dark-grey-blue;
-    overflow: hidden;
+    
     @include for-mobile-up{
         height: 100vh;
         display: flex;
@@ -15,6 +15,10 @@ body{
         justify-content: center;
         align-items: center;
     }
+}
+a{
+    text-decoration: none;
+    color:$desaturated-blue;
 }
 
 .container{
@@ -27,20 +31,18 @@ body{
         max-width: 800px;
         .img__container{
             width: 43%;
-            padding:0 100px;
+            object-fit: cover;
             border-bottom-left-radius: 10px;
             border-top-right-radius: 0;
+            picture{
+                height: 100%;
+            }
         }
         .text__container{
             width: 60%;
             
         }
     }
-}
-
-
-.img__container{
-    max-width: 600px;
 }
 
 .text__container{
@@ -65,13 +67,13 @@ body{
 }
 
 .img__container {
-    background-image: url(../images/drawers.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 105px;
+    max-width: 600px;
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    img{
+        object-fit: cover;
+    }
 }
 
 .socials__container{
@@ -107,6 +109,7 @@ body{
         padding-top: 5px;
         z-index: 1;
         
+        
     }
     &--share:hover{
         background-color: $dark-grey-blue;
@@ -134,7 +137,7 @@ body{
     pointer-events: none;
     @include for-mobile-up{
         position: absolute;
-        right:-12%;
+        right:-10%;
         left:auto;
         bottom: auto;
         top:50%;
@@ -161,15 +164,14 @@ body{
 .share-panel span{
     color:$greyish-blue;
 }
-
+.share-panel i{
+    color:#fff;
+}
 .share-panel i:hover{
     color: $greyish-blue;
     border-radius: 50%; 
 }
-.share-panel:hover{
-    cursor: pointer;
-    
-}
+
 
 
 .show{

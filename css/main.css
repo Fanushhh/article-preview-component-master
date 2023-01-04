@@ -64,7 +64,6 @@ body {
   font-family: "Manrope", sans-serif;
   background-color: hsl(210deg, 46%, 95%);
   color: hsl(217deg, 19%, 35%);
-  overflow: hidden;
 }
 @media (min-width: 600px) {
   body {
@@ -74,6 +73,11 @@ body {
     justify-content: center;
     align-items: center;
   }
+}
+
+a {
+  text-decoration: none;
+  color: hsl(214deg, 17%, 51%);
 }
 
 .container {
@@ -89,17 +93,17 @@ body {
   }
   .container .img__container {
     width: 43%;
-    padding: 0 100px;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 0;
+  }
+  .container .img__container picture {
+    height: 100%;
   }
   .container .text__container {
     width: 60%;
   }
-}
-
-.img__container {
-  max-width: 600px;
 }
 
 .text__container {
@@ -129,13 +133,14 @@ body {
 }
 
 .img__container {
-  background-image: url(../images/drawers.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 105px;
+  max-width: 600px;
   width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+.img__container img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .socials__container {
@@ -199,7 +204,7 @@ body {
 @media (min-width: 600px) {
   .share-panel {
     position: absolute;
-    right: -12%;
+    right: -10%;
     left: auto;
     bottom: auto;
     top: 50%;
@@ -226,13 +231,13 @@ body {
   color: hsl(212deg, 23%, 69%);
 }
 
+.share-panel i {
+  color: #fff;
+}
+
 .share-panel i:hover {
   color: hsl(212deg, 23%, 69%);
   border-radius: 50%;
-}
-
-.share-panel:hover {
-  cursor: pointer;
 }
 
 .show {

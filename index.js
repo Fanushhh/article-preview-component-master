@@ -4,5 +4,6 @@ const sharePanel = document.querySelector('.share-panel');
 
 shareButton.addEventListener('click', function(){
     sharePanel.classList.toggle('show');
+    shareButton.style.color = '#fff';
     
 })
